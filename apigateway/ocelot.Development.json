@@ -1,0 +1,41 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/employee/allemployee",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5291"
+        }
+      ],
+      "UpstreamPathTemplate": "/employee",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/employee",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5291"
+        }
+      ],
+      "UpstreamPathTemplate": "/addemployee",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/employee/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5291"
+        }
+      ],
+      "UpstreamPathTemplate": "/employee/{id}",
+      "UpstreamHttpMethod": [ "DELETE","GET" ]
+    }
+
+  ]
+}
